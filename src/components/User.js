@@ -10,11 +10,26 @@ function User({ userDetails }) {
     <>
       <img src={picture.large} alt="profile" />
       <ul key={id.value}>
-        <li>{name.first || "First name not provided"}</li>
-        <li>{name.last || "Last name not provided"}</li>
-        <li>{location.city + " " + location.street.name}</li>
-        <li>{email}</li>
         <li>
+          <b>Name:&nbsp;</b>
+          {name.first ? name.first : "Unavailable"}
+        </li>
+        <li>
+          <b>Surname:&nbsp;</b>
+          {name.last ? name.last : "Unavailable"}
+        </li>
+        <li>
+          <b>Address:&nbsp;</b>
+          {location
+            ? `${location.city} ${location.street.name}`
+            : "Unavailable"}
+        </li>
+        <li>
+          <b>Email:&nbsp;</b>
+          {email}
+        </li>
+        <li>
+          <b>Registered at:&nbsp;</b>
           <Moment>{dateToFormat}</Moment>
         </li>
       </ul>

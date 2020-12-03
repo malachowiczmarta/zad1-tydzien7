@@ -20,7 +20,7 @@ function UserList() {
   }, []);
   console.log(users);
   return (
-    <section className="UserList">
+    <section className="userList">
       {isLoading && <p>Loading...</p>}
       {hasError && <p>An Error has occured</p>}
 

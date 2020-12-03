@@ -8,7 +8,7 @@ function User({ userDetails }) {
 
   return (
     <>
-      <img src={picture.medium} alt="profile" />
+      <img src={picture.large} alt="profile" />
       <ul key={id.value}>
         <li>{name.first || "First name not provided"}</li>
         <li>{name.last || "Last name not provided"}</li>

@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import Details from "./Details";
 
 function UserList({ data }) {
   const { results } = data;
-
-  // const [isLoading, setLoading] = useState(true);
-  // const [hasError, setError] = useState(false);
-
-  // const renderUsersList = () => {
-  //   if (!isLoading) {
-  //     return !hasError ? (
-  //       generateUsers()
-  //     ) : (
-  //       <h3>Wystąpił błąd. Spróbuj później</h3>
-  //     );
-  //   }
-  //   return <h3>Trwa ładowanie danych...</h3>;
-  // };
 
   return (
     <section className="userList">
@@ -27,6 +14,7 @@ function UserList({ data }) {
             <Link to={`/users/${user.login.uuid}`}>
               {user.name.first} {user.name.last}
             </Link>
+            <Details userDetails={user} />
           </div>
         ))}
     </section>

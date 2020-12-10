@@ -1,11 +1,12 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Details from "./Details";
+import MapUser from "./Map";
 
 function User({ data }) {
   const { id } = useParams();
   const { results } = data;
-  console.log(results);
+
   if (!results) {
     return null;
   }
@@ -18,14 +19,17 @@ function User({ data }) {
   return (
     <>
       <Link to="/">&larr; Wróć do listy</Link>
-      <div className="user-container">
-        <h2>
-          {user.name.first
-            ? `${user.name.first} ${user.name.last}`
-            : "Unavailable"}
-        </h2>
-        <Details userDetails={user} />
-      </div>
+      <article className="user-details-wrapper">
+        <div>
+          <h2>
+            {user.name.first
+              ? `${user.name.first} ${user.name.last}`
+              : "Unavailable"}
+          </h2>
+          <Details userDetails={user} />
+        </div>
+        <MapUser coordinates={user.location.coordinates} name={user.name} />
+      </article>
     </>
   );
 }

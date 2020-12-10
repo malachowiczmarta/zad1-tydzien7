@@ -3,15 +3,36 @@
   margin-left: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-details-container {
+  text-align: center;
+}
+
+.user-details {
+  text-align: left;
+}
+
 .UserList {
   display: flex;
   flex-wrap: wrap;
 }
 
-.userContainer {
+.user-details-wrapper {
   display: flex;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 450px;
+  align-items: center;
+  width: 320px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
@@ -21,6 +42,7 @@
 img {
   padding: 5px;
   border-radius: 10px;
+  margin: 5px auto;
 }
 
 ul {

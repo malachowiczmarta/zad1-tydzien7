@@ -10,7 +10,7 @@ function UserList({ data }) {
       <h1>Users list</h1>
       {results &&
         results.map((user) => (
-          <div key={user.login.uuid}>
+          <div key={user.login.uuid} className="user-container">
             <Link to={`/users/${user.login.uuid}`}>
               {user.name.first} {user.name.last}
             </Link>

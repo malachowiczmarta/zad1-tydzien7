@@ -14,7 +14,7 @@ function User({ data }) {
   const matchingUsers = results.filter((elem) => elem.login.uuid === id);
   const user = matchingUsers[0];
 
-  // const {name, location, email} = user;
+  const { name, location, email } = user;
 
   return (
     <>

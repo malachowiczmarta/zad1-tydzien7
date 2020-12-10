@@ -8,9 +8,6 @@ function Details({ userDetails }) {
 
   const dateToFormat = userDetails.registered.date;
 
-  console.log(dateToFormat);
-  // const {name, location, email} = user;
-
   return (
     <div className="user-details-container">
       <img src={userDetails.picture.large} alt="profile" />

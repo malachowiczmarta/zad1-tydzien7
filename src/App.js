@@ -29,7 +29,6 @@ function App() {
   useEffect(() => {
     getUsers();
   }, []);
-  console.log(users);
 
   return (
     <div className="App">
